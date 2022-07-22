@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.container {
+    display: flex;
+    width: 90vw;
+}
+.container .panel:nth-child(1) {
+    background-image: url("../images/Eldor.jpg");
+}
+.container .panel:nth-child(2) {
+    background-image: url("../images/Mbappe.jpg");
+}
+.container .panel:nth-child(3) {
+    background-image: url("../images/Messi.jpg");
+}
+.container .panel:nth-child(4) {
+    background-image: url("../images/Neymar.jpg");
+}
+.container .panel:nth-child(5) {
+    background-image: url("../images/Ronaldo.jpeg");
+}
+
+.panel {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 85vh;
+    border-radius: 5px;
+    color: yellow;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    transition: all 700ms ease-in;
+    position: relative;
+}
+.panel h3 {
+    font-size: 24px;
+    padding-top: 450px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+}
+.panel.active {
+    flex:5;
+}
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in;
+}
